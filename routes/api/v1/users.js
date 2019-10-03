@@ -11,9 +11,9 @@ router.post('/', function(req, res, next) {
   if (req.body.password !== req.body.passwordConfirmation) {
     payload = {
       error: 'Passwords do not match.',
-      status: 400
+      status: 401
     }
-    res.status(400).send(payload)
+    res.status(401).send(payload)
     return;
   }
   user.create({
