@@ -35,7 +35,9 @@ router.post('/', function(req, res, next) {
         res.status(401).send(payload)
       })
     })
-    .catch()
+    .catch(error =>{
+      res.status(500).send({ error })
+    })
 })
 
 module.exports = router;
