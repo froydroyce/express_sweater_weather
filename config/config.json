@@ -14,6 +14,7 @@
     "dialect": "postgres"
   },
   "production": {
+    "use_env_variable": "DATABASE_URL",
     "username": "sejinkim",
     "password": null,
     "database": "express_sweater_weather_production",
