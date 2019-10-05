@@ -2,7 +2,7 @@ var shell = require('shelljs');
 var request = require("supertest");
 var app = require('../app');
 var user = require('../models').User;
-var user = require('../models').Favorite;
+var favorite = require('../models').Favorite;
 
 
 describe('api', () => {
@@ -16,7 +16,7 @@ describe('api', () => {
 
       const creds = {
         location: "Denver, CO",
-        papiKey: "QRQG7JV-10X42RN-NKE7NT6-421WKBV"
+        apiKey: "QRQG7JV-10X42RN-NKE7NT6-421WKBV"
       }
 
       return request(app).post("/api/v1/favorites").send(creds).then(response => {
