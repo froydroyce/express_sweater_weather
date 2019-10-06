@@ -34,7 +34,7 @@ router.get('/', function(req, res, next) {
           fetch(`${darksky}/${darkskyApi}/${location.lat},${location.lng}`)
             .then(response => response.json())
             .then(result => {
-              payload ={
+              payload = {
                 location: req.query.location,
                 currently: result.currently,
                 hourly: result.hourly,
