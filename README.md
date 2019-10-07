@@ -1,8 +1,8 @@
-### Introduction
+## Introduction
 ---
 - Sweater Weather is a Turing Back End Engineering project designed to teach the fundamentals of building an API with Node.js and Express framework. This project is an API with endpoints that produce forecast data for a specific location. It consumes APIs from Google and DarkSky to gather information to be parsed for consumption. 
 
-### Initial Setup
+## Initial Setup
 ---
 ```
 git clone git@github.com:froydroyce/express_sweater_weather.git
@@ -19,7 +19,7 @@ DARKSKY_API=<YOUR DARKSKY API KEY>
 GOOGLE=<YOUR GOOGLE GEOCODE API KEY>
 
 ```
-### How to Use
+## How to Use
 ---
 - To run the server:
 ```
@@ -249,21 +249,21 @@ body:
 ```
 status: 204
 ```
-### Known Issues
+## Known Issues
 ---
 - Validations: Application is currently not set up with validations for user registration.
 
-### Running Tests
+## Running Tests
 ---
 - All endpoints are currently tested for only happy paths. 
 - To run all tests:
 ```
 npm test
 ```
-### Schema Design
+## Schema Design
 ---
 ![Schema Diagram](https://live.staticflickr.com/65535/48857447528_5852d7dbe2_b.jpg)
-### Tech Stack
+## Tech Stack
 ---
 **Core**
 - Primary Language: Javascript
