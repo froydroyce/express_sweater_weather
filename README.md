@@ -19,8 +19,14 @@ DARKSKY_API=<YOUR DARKSKY API KEY>
 GOOGLE=<YOUR GOOGLE GEOCODE API KEY>
 
 ```
-### How to USe
+### How to Use
 ---
+- To run the server:
+```
+npm start
+```
+#### Endpoints
+
 
 ### Known Issues
 ---
