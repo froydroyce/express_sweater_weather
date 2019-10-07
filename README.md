@@ -251,18 +251,30 @@ status: 204
 ```
 ### Known Issues
 ---
+- Validations: Application is currently not set up with validations for user registration.
 
 ### Running Tests
 ---
-
-### How to Contribute
----
-
-### Core Contributors
----
-
+- All endpoints are currently tested for only happy paths. 
+- To run all tests:
+```
+npm test
+```
 ### Schema Design
 ---
-
+![Schema Diagram](https://live.staticflickr.com/65535/48857447528_5852d7dbe2_b.jpg)
 ### Tech Stack
 ---
+**Core**
+- Primary Language: Javascript
+- Framework: Express v4.16.4
+- Database: PostgrSQL v7.12.1
+- ORM: Sequelize v5.19.1
+- Testing Suite: Jest v24.9.0
+
+**Packages**
+- bcrypt
+- dotenv
+- node-fetch
+- uuid-apikey
+
