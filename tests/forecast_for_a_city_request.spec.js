@@ -19,7 +19,6 @@ describe('api', () => {
 
       return request(app).get("/api/v1/forecast?location=denver,co").send(creds).then(response => {
         expect(response.status).toBe(200)
-        console.log(Object.keys(response.body))
         expect(Object.keys(response.body)).toContain('location')
         expect(Object.keys(response.body)).toContain('currently')
         expect(Object.keys(response.body)).toContain('hourly')

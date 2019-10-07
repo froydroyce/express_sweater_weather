@@ -92,4 +92,48 @@ router.get('/', async (req, res, next) => {
     })
 })
 
+router.delete('/', function(req, res, next) {
+  res.setHeader('Content-Type', 'appication/json')
+
+  user.findOne({
+    where: {
+      apiKey: req.body.apiKey
+    },
+    include: [{
+      model: favorite,
+      as: 'favorites'
+    }]
+  })
+    .then(user => {
+      if (!user) {
+        payload = {
+          error: 'Ivalid or missing API key',
+          status: 401
+        }
+        res.status(401).send(payload)
+        return;
+      }
+
+      favorite.destroy({
+        where: {
+          location: req.body.location,
+          userId: user.id,
+        }
+      })
+        .then(deletedRecord => {
+          if(deletedRecord === 1){
+            payload = {
+              message: "Deleted successfully"
+            }
+            res.status(204).send(payload);
+            return
+          }
+          res.status(404).send({message:"record not found"})
+        })
+    })
+    .catch(error => {
+      res.status(500).send({ error })
+    })
+})
+
 module.exports = router;
