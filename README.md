@@ -1,5 +1,5 @@
 # Sweater Weather Express
----
+----
 ## Introduction
 ---
 - Sweater Weather is a Turing Back End Engineering project designed to teach the fundamentals of building an API with Node.js and Express framework. This project is an API with endpoints that produce forecast data for a specific location. It consumes APIs from Google and DarkSky to gather information to be parsed for consumption. 
