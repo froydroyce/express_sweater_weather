@@ -27,7 +27,7 @@ GOOGLE=<YOUR GOOGLE GEOCODE API KEY>
 ```
 npm start
 ```
-- Endpoints can ccessed through `http://localhost:3000` 
+- Endpoints can accessed through `http://localhost:3000` 
 
 **Account Creation**
 - Request: 
